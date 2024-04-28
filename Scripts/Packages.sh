@@ -13,6 +13,11 @@ UPDATE_PACKAGE() {
 	git clone --depth=1 --single-branch --branch $PKG_BRANCH "https://github.com/$PKG_REPO.git"
         git clone --depth=1 https://github.com/xiaorouji/openwrt-passwall-packages package/openwrt-passwall
         git clone --depth=1 https://github.com/xiaorouji/openwrt-passwall package/luci-app-passwall
+	git clone --depth=1 https://github.com/xiaorouji/openwrt-passwall2 package/luci-app-passwall2
+        git clone --depth=1 -b lede https://github.com/pymumu/luci-app-smartdns package/luci-app-smartdns
+        git clone --depth=1 https://github.com/pymumu/openwrt-smartdns package/smartdns
+	git clone --depth=1 https://github.com/sbwml/luci-app-mosdns package/luci-app-mosdns
+ 
 
 	if [[ $PKG_SPECIAL == "pkg" ]]; then
 		cp -rf $(find ./$REPO_NAME/ -type d -iname "*$PKG_NAME*" -prune) ./
@@ -31,7 +36,9 @@ UPDATE_PACKAGE "helloworld" "fw876/helloworld" "master"
 UPDATE_PACKAGE "openclash" "vernesong/OpenClash" "dev"
 UPDATE_PACKAGE "openwrt-passwall" "xiaoruoji/openwrt-passwall" "main"
 UPDATE_PACKAGE "openwrt-passwall2" "xiaoruoji/openwrt-passwall2" "main"
-UPDATE_PACKAGE "smartdns" "pymumu/smartdns" "master"
+UPDATE_PACKAGE "smartdns" "pymumu/smartdns" "master" 
+UPDATE_PACKAGE "luci-app-mosdns" "sbwml/luci-app-mosdns" "v5"
+
 
 if [[ $WRT_URL == *"immortalwrt"* ]]; then
 	UPDATE_PACKAGE "homeproxy" "immortalwrt/homeproxy" "dev"
