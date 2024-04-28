@@ -16,7 +16,7 @@ UPDATE_PACKAGE() {
 	git clone --depth=1 https://github.com/xiaorouji/openwrt-passwall2 package/luci-app-passwall2
         git clone --depth=1 -b lede https://github.com/pymumu/luci-app-smartdns package/luci-app-smartdns
         git clone --depth=1 https://github.com/pymumu/openwrt-smartdns package/smartdns
-	git clone --depth=1 https://github.com/sbwml/luci-app-mosdns package/luci-app-mosdns
+	git clone --depth=1 https://github.com/sbwml/luci-app-mosdns -b v5 package/mosdns
  
 
 	if [[ $PKG_SPECIAL == "pkg" ]]; then
