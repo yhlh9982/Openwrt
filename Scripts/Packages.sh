@@ -14,8 +14,8 @@ UPDATE_PACKAGE() {
         git clone --depth=1 https://github.com/xiaorouji/openwrt-passwall-packages package/openwrt-passwall
         git clone --depth=1 https://github.com/xiaorouji/openwrt-passwall package/luci-app-passwall
 	git clone --depth=1 https://github.com/xiaorouji/openwrt-passwall2 package/luci-app-passwall2
-        git clone --depth=1 https://github.com/firkerword/luci-app-smartdns.git package/luci-app-smartdns
-        git clone --depth=1 https://github.com/firkerword/smartdns.git package/smartdns
+        #git clone --depth=1 https://github.com/firkerword/luci-app-smartdns.git package/luci-app-smartdns
+        #git clone --depth=1 https://github.com/firkerword/smartdns.git package/smartdns
 	git clone --depth=1 https://github.com/sbwml/luci-app-mosdns -b v5 package/mosdns
  
 
@@ -36,7 +36,7 @@ UPDATE_PACKAGE "helloworld" "fw876/helloworld" "master"
 UPDATE_PACKAGE "openclash" "vernesong/OpenClash" "dev"
 UPDATE_PACKAGE "openwrt-passwall" "xiaoruoji/openwrt-passwall" "main"
 UPDATE_PACKAGE "openwrt-passwall2" "xiaoruoji/openwrt-passwall2" "main"
-#UPDATE_PACKAGE "smartdns" "pymumu/smartdns" "master" 
+UPDATE_PACKAGE "smartdns" "pymumu/smartdns" "master" 
 UPDATE_PACKAGE "luci-app-mosdns" "sbwml/luci-app-mosdns" "v5"
 
 
