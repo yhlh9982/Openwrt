@@ -11,6 +11,8 @@ UPDATE_PACKAGE() {
 	rm -rf $(find ../feeds/luci/ -type d -iname "*$PKG_NAME*" -prune)
 
 	git clone --depth=1 --single-branch --branch $PKG_BRANCH "https://github.com/$PKG_REPO.git"
+        git clone --depth=1 https://github.com/xiaorouji/openwrt-passwall-packages package/openwrt-passwall
+        git clone --depth=1 https://github.com/xiaorouji/openwrt-passwall package/luci-app-passwall
 
 	if [[ $PKG_SPECIAL == "pkg" ]]; then
 		cp -rf $(find ./$REPO_NAME/ -type d -iname "*$PKG_NAME*" -prune) ./
