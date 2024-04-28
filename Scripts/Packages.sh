@@ -36,7 +36,7 @@ UPDATE_PACKAGE "helloworld" "fw876/helloworld" "master"
 UPDATE_PACKAGE "openclash" "vernesong/OpenClash" "dev"
 UPDATE_PACKAGE "openwrt-passwall" "xiaoruoji/openwrt-passwall" "main"
 UPDATE_PACKAGE "openwrt-passwall2" "xiaoruoji/openwrt-passwall2" "main"
-UPDATE_PACKAGE "smartdns" "pymumu/smartdns" "master" 
+#UPDATE_PACKAGE "smartdns" "pymumu/smartdns" "master" 
 UPDATE_PACKAGE "luci-app-mosdns" "sbwml/luci-app-mosdns" "v5"
 
 
