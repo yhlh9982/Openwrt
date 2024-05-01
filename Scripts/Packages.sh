@@ -13,6 +13,8 @@ UPDATE_PACKAGE() {
 rm -rf feeds/packages/net/mosdns
 rm -rf feeds/packages/net/msd_lite
 rm -rf feeds/packages/net/smartdns
+rm -rf feeds/packages/lang/golang
+rm -rf feeds/packages/net/v2ray-geodata
 rm -rf feeds/luci/themes/luci-theme-argon
 rm -rf feeds/luci/themes/luci-theme-netgear
 rm -rf feeds/luci/applications/luci-app-mosdns
@@ -43,8 +45,10 @@ git_sparse_clone openwrt-18.06 https://github.com/immortalwrt/luci applications/
 # SmartDNS
 git clone --depth=1 -b lede https://github.com/pymumu/luci-app-smartdns package/luci-app-smartdns
 git clone --depth=1 https://github.com/pymumu/openwrt-smartdns package/smartdns
-# MosDNS
-git clone --depth=1 https://github.com/sbwml/luci-app-mosdns package/luci-app-mosdns
+# mosdns
+git clone --depth=1 https://github.com/sbwml/packages_lang_golang -b 20.x feeds/packages/lang/golang
+git clone --depth=1 https://github.com/sbwml/v2ray-geodata package/v2ray-geodata
+git clone --depth=1 https://github.com/sbwml/luci-app-mosdns -b v5 package/mosdns
 # 科学上网插件
 git clone --depth=1 https://github.com/xiaorouji/openwrt-passwall-packages package/openwrt-passwall
 git clone --depth=1 https://github.com/xiaorouji/openwrt-passwall package/luci-app-passwall
