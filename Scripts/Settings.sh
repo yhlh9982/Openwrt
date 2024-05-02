@@ -35,6 +35,7 @@ echo "CONFIG_PACKAGE_luci-app-$WRT_THEME-config=y" >> ./.config
 if [[ $WRT_URL == *"lede"* ]]; then
 	echo "CONFIG_PACKAGE_luci-app-ssr-plus=n" >> ./.config
 	echo "CONFIG_PACKAGE_luci-app-openclash=n" >> ./.config
+        echo "CONFIG_PACKAGE_luci-app-smartdns=y" >> ./.config
 elif [[ $WRT_URL == *"immortalwrt"* ]]; then
 	echo "CONFIG_PACKAGE_luci=y" >> ./.config
 	echo "CONFIG_LUCI_LANG_zh_Hans=y" >> ./.config
