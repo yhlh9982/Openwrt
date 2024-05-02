@@ -44,12 +44,15 @@ git clone --depth=1 https://github.com/Jason6111/luci-app-netdata package/luci-a
 # git_sparse_clone master https://github.com/syb999/openwrt-19.07.1 package/network/services/msd_lite
 
 # SmartDNS
-git clone --depth=1 https://github.com/pymumu/luci-app-smartdns package/luci-app-smartdns
+git clone --depth=1 -b lede https://github.com/pymumu/luci-app-smartdns package/luci-app-smartdns
 git clone --depth=1 https://github.com/pymumu/openwrt-smartdns package/smartdns
 # MosDNS
 git clone --depth=1 https://github.com/sbwml/packages_lang_golang -b 20.x feeds/packages/lang/golang
 git clone --depth=1 https://github.com/sbwml/v2ray-geodata package/v2ray-geodata
 git clone --depth=1 https://github.com/sbwml/luci-app-mosdns -b v5 package/mosdns
+
+# Alist
+#git clone --depth=1 https://github.com/sbwml/luci-app-alist package/luci-app-alist
 
 # 科学上网插件
 git clone --depth=1 https://github.com/xiaorouji/openwrt-passwall-packages package/openwrt-passwall
@@ -72,7 +75,7 @@ UPDATE_PACKAGE "argon-config" "jerrykuku/luci-app-argon-config" "$([[ $WRT_URL =
 
 UPDATE_PACKAGE "helloworld" "fw876/helloworld" "master"
 UPDATE_PACKAGE "openclash" "vernesong/OpenClash" "dev"
-UPDATE_PACKAGE "luci-app-smartdns" "pymumu/luci-app-smartdns" "master"
+UPDATE_PACKAGE "luci-app-smartdns" "pymumu/luci-app-smartdns" "lede"
 
 
 if [[ $WRT_URL == *"immortalwrt"* ]]; then
