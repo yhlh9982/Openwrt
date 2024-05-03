@@ -13,7 +13,7 @@ sed -i "s/timezone='.*'/timezone='CST-8'/g" $CFG_FILE
 sed -i "/timezone='.*'/a\\\t\t\set system.@system[-1].zonename='Asia/Shanghai'" $CFG_FILE
 
 # 修改内核
-#sed -i 's/PATCHVER:=*.*/PATCHVER:=6.6/g' target/linux/x86/Makefile
+sed -i 's/PATCHVER:=*.*/PATCHVER:=6.6/g' target/linux/x86/Makefile
 
 if [[ $WRT_URL == *"lede"* ]]; then
 	LEDE_FILE=$(find ./package/lean/autocore/ -type f -name "index.htm")
