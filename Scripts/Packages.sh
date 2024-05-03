@@ -68,6 +68,9 @@ git clone --depth=1 https://github.com/xiaorouji/openwrt-passwall2 package/luci-
 		mv -f $REPO_NAME $PKG_NAME
 	fi
 }
+#UPDATE_PACKAGE "luci-app-smartdns" "pymumu/luci-app-smartdns" "lede"
+#UPDATE_PACKAGE "luci-app-smartdns" "pymumu/luci-app-smartdns" "master"
+UPDATE_PACKAGE "smartdns" "pymumu/luci-app-smartdns" "$([[ $WRT_URL == *"lede"* ]] && echo "lede" || echo "master")"
 
 UPDATE_PACKAGE "design" "gngpp/luci-theme-design" "$([[ $WRT_URL == *"lede"* ]] && echo "main" || echo "js")"
 UPDATE_PACKAGE "design-config" "gngpp/luci-app-design-config" "master"
@@ -76,9 +79,7 @@ UPDATE_PACKAGE "argon-config" "jerrykuku/luci-app-argon-config" "$([[ $WRT_URL =
 
 UPDATE_PACKAGE "helloworld" "fw876/helloworld" "master"
 UPDATE_PACKAGE "openclash" "vernesong/OpenClash" "dev"
-#UPDATE_PACKAGE "luci-app-smartdns" "pymumu/luci-app-smartdns" "lede"
-#UPDATE_PACKAGE "luci-app-smartdns" "pymumu/luci-app-smartdns" "master"
-UPDATE_PACKAGE "smartdns" "pymumu/luci-app-smartdns" "$([[ $WRT_URL == *"lede"* ]] && echo "lede" || echo "master")"
+
 
 if [[ $WRT_URL == *"immortalwrt"* ]]; then
 	UPDATE_PACKAGE "homeproxy" "immortalwrt/homeproxy" "dev"
