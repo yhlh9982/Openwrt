@@ -44,8 +44,8 @@ git clone --depth=1 https://github.com/sirpdboy/luci-app-netdata package/luci-ap
 # git_sparse_clone master https://github.com/syb999/openwrt-19.07.1 package/network/services/msd_lite
 
 # SmartDNS
-#git clone --depth=1 -b lede https://github.com/pymumu/luci-app-smartdns package/luci-app-smartdns
-git clone --depth=1 https://github.com/pymumu/luci-app-smartdns package/luci-app-smartdns
+git clone --depth=1 -b lede https://github.com/pymumu/luci-app-smartdns package/luci-app-smartdns
+#git clone --depth=1 https://github.com/pymumu/luci-app-smartdns package/luci-app-smartdns
 git clone --depth=1 https://github.com/pymumu/openwrt-smartdns package/smartdns
 # MosDNS
 git clone --depth=1 https://github.com/sbwml/packages_lang_golang -b 20.x feeds/packages/lang/golang
