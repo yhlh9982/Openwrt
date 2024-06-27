@@ -31,7 +31,7 @@ UPDATE_PACKAGE "smartdns" "pymumu/luci-app-smartdns" "master"
 UPDATE_PACKAGE "openwrt-smartdns" "pymumu/openwrt-smartdns" "master"
 #mosdns
 UPDATE_PACKAGE "v2ray-geodata" "sbwml/v2ray-geodata" "master"
-UPDATE_PACKAGE "packages_lang_golang" "sbwml/packages_lang_golang" "21.x"
+UPDATE_PACKAGE "lang_golang" "sbwml/packages_lang_golang" "21.x"
 UPDATE_PACKAGE "mosdns" "sbwml/luci-app-mosdns" "v5"
 
 UPDATE_PACKAGE "openclash" "vernesong/OpenClash" "dev" "pkg"
