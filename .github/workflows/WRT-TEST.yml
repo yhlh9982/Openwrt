@@ -7,7 +7,7 @@ on:
   workflow_dispatch:
     inputs:
       SOURCE:
-        default: 'immortalwrt/immortalwrt'
+        default: 'coolsnowwolf/lede'
         required: true
         type: choice
         options: [immortalwrt/immortalwrt, coolsnowwolf/lede, LiBwrt/openwrt-6.x, King-Of-Knights/openwrt-6.x]
@@ -49,13 +49,13 @@ jobs:
       #默认主题
       WRT_THEME: ${{inputs.THEME}}
       #默认主机名
-      WRT_NAME: OWRT
+      WRT_NAME: OpenWRT
       #默认WIFI名
-      WRT_WIFI: OWRT
+      WRT_WIFI: OpenWRT
       #默认密码，仅作提示，修改无用
       WRT_PW: 无
       #默认地址
-      WRT_IP: 192.168.10.1
+      WRT_IP: 192.168.30.1
       #默认源码
       WRT_URL: https://github.com/${{inputs.SOURCE}}.git
       #默认分支
