@@ -30,7 +30,7 @@ else
 fi
 
 #修改x86固件内核为6.6
-sed -i 's/KERNEL_PATCHVER:=6.6/KERNEL_PATCHVER:=6.6/g' target/linux/x86/Makefile
+sed -i 's/KERNEL_PATCHVER:=6.1/KERNEL_PATCHVER:=6.6/g' target/linux/x86/Makefile
 
 #默认主题修改
 echo "CONFIG_PACKAGE_luci-theme-$WRT_THEME=y" >> ./.config
