@@ -65,7 +65,6 @@ if [[ $WRT_URL != *"lede"* ]]; then
 fi
 
 if [[ $WRT_URL == *"openwrt-6.x"* ]]; then
-        UPDATE_PACKAGE "homeproxy" "VIKINGYFY/homeproxy" "dev"
 	UPDATE_PACKAGE "qmi-wwan" "immortalwrt/wwan-packages" "master" "pkg"
         UPDATE_PACKAGE "smartdns" "pymumu/luci-app-smartdns" "master"
 fi
