@@ -30,7 +30,8 @@ jobs:
       fail-fast: false
       #max-parallel: 3
       matrix:
-        TARGET: [X86]#Mediatek, Rockchip
+        TARGET: [X86]
+        #Mediatek, Rockchip
         SOURCE: [coolsnowwolf/lede]
         include:
           #- SOURCE: immortalwrt/immortalwrt
