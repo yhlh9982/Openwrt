@@ -26,12 +26,10 @@ UPDATE_PACKAGE "design-config" "gngpp/luci-app-design-config" "master"
 UPDATE_PACKAGE "argon" "jerrykuku/luci-theme-argon" "$([[ $WRT_URL == *"lede"* ]] && echo "18.06" || echo "master")"
 UPDATE_PACKAGE "argon-config" "jerrykuku/luci-app-argon-config" "$([[ $WRT_URL == *"lede"* ]] && echo "18.06" || echo "master")"
 
-#smartdns
-UPDATE_PACKAGE "smartdns" "pymumu/luci-app-smartdns" "master"
+#smartdns相关
 UPDATE_PACKAGE "openwrt-smartdns" "pymumu/openwrt-smartdns" "master"
 #mosdns
 UPDATE_PACKAGE "v2ray-geodata" "sbwml/v2ray-geodata" "master"
-UPDATE_PACKAGE "lang_golang" "sbwml/packages_lang_golang" "21.x"
 UPDATE_PACKAGE "mosdns" "sbwml/luci-app-mosdns" "v5"
 #科学插件
 UPDATE_PACKAGE "openclash" "vernesong/OpenClash" "dev" "pkg"
@@ -44,12 +42,15 @@ UPDATE_PACKAGE "passwall2" "xiaorouji/openwrt-passwall2" "main"
 UPDATE_PACKAGE "gecoosac" "lwb1978/openwrt-gecoosac" "main"
 
 if [[ $WRT_URL != *"lede"* ]]; then
-	UPDATE_PACKAGE "homeproxy" "VIKINGYFY/homeproxy" "dev"
+	#UPDATE_PACKAGE "homeproxy" "VIKINGYFY/homeproxy" "dev"
 	UPDATE_PACKAGE "mihomo" "morytyann/OpenWrt-mihomo" "main" "pkg"
+        UPDATE_PACKAGE "smartdns" "pymumu/luci-app-smartdns" "lede"
+	UPDATE_PACKAGE "lang_golang" "sbwml/packages_lang_golang" "21.x"
 fi
 
 if [[ $WRT_URL == *"openwrt-6.x"* ]]; then
 	UPDATE_PACKAGE "qmi-wwan" "immortalwrt/wwan-packages" "master" "pkg"
+        UPDATE_PACKAGE "smartdns" "pymumu/luci-app-smartdns" "master"
 fi
 
 #更新软件包版本
