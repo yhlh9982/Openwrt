@@ -17,7 +17,7 @@ on:
         type: string
       TARGET:
         default: 'Mediatek'
-        required: false
+        required: true
         type: choice
         options: [Mediatek, Rockchip, X86, Qualcommax]
       THEME:
