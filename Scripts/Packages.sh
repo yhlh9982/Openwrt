@@ -41,6 +41,10 @@ git clone --depth=1 https://github.com/ilxp/luci-app-ikoolproxy package/luci-app
 git clone --depth=1 https://github.com/esirplayground/luci-app-poweroff package/luci-app-poweroff
 git clone --depth=1 https://github.com/destan19/OpenAppFilter package/OpenAppFilter
 git clone --depth=1 https://github.com/Jason6111/luci-app-netdata package/luci-app-netdata
+git clone --depth=1 https://github.com/ximiTech/luci-app-msd_lite package/luci-app-msd_lite
+git clone --depth=1 https://github.com/ximiTech/msd_lite package/msd_lite
+git clone --depth=1 https://github.com/sbwml/luci-app-alist package/luci-app-alist
+git clone --depth=1 https://github.com/lwb1978/openwrt-gecoosac package/openwrt-gecoosac
 
 #smartdns相关
 git clone --depth=1 https://github.com/pymumu/openwrt-smartdns package/smartdns
@@ -54,8 +58,6 @@ git clone --depth=1 https://github.com/xiaorouji/openwrt-passwall package/luci-a
 #git clone --depth=1 -b luci-smartdns-dev https://github.com/xiaorouji/openwrt-passwall package/luci-app-passwall
 git clone --depth=1 https://github.com/xiaorouji/openwrt-passwall2 package/luci-app-passwall2
 git clone --depth=1 -b master https://github.com/vernesong/OpenClash package/luci-app-openclash
-
-UPDATE_PACKAGE "gecoosac" "lwb1978/openwrt-gecoosac" "main"
 
 if [[ $WRT_URL != *"lede"* ]]; then
 git clone --depth=1 -b lede https://github.com/pymumu/luci-app-smartdns package/luci-app-smartdns
