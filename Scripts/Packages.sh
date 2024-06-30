@@ -33,9 +33,10 @@ UPDATE_PACKAGE "openwrt-smartdns" "pymumu/openwrt-smartdns" "master"
 UPDATE_PACKAGE "v2ray-geodata" "sbwml/v2ray-geodata" "master"
 UPDATE_PACKAGE "lang_golang" "sbwml/packages_lang_golang" "21.x"
 UPDATE_PACKAGE "mosdns" "sbwml/luci-app-mosdns" "v5"
-
+#科学插件
 UPDATE_PACKAGE "openclash" "vernesong/OpenClash" "dev" "pkg"
 UPDATE_PACKAGE "ssr-plus" "fw876/helloworld" "master"
+UPDATE_PACKAGE "passwall-packages" "xiaorouji/openwrt-passwall-packages" "main"
 UPDATE_PACKAGE "passwall" "xiaorouji/openwrt-passwall" "main"
 #UPDATE_PACKAGE "passwall" "xiaorouji/openwrt-passwall" "luci-smartdns-dev"
 UPDATE_PACKAGE "passwall2" "xiaorouji/openwrt-passwall2" "main"
@@ -85,24 +86,3 @@ UPDATE_VERSION() {
         fi
     done
 }
-
-#UPDATE_VERSION "软件包名" "项目地址" "测试版，true，可选，默认为否"
-UPDATE_VERSION "brook" "txthinking/brook"
-UPDATE_VERSION "dns2tcp" "zfl9/dns2tcp"
-UPDATE_VERSION "hysteria" "apernet/hysteria"
-UPDATE_VERSION "ipt2socks" "zfl9/ipt2socks"
-UPDATE_VERSION "microsocks" "rofl0r/microsocks"
-UPDATE_VERSION "mihomo" "metacubex/mihomo"
-UPDATE_VERSION "mosdns" "IrineSistiana/mosdns"
-UPDATE_VERSION "naiveproxy" "klzgrad/naiveproxy"
-UPDATE_VERSION "neturl" "golgote/neturl"
-UPDATE_VERSION "shadowsocks-rust" "shadowsocks/shadowsocks-rust"
-UPDATE_VERSION "sing-box" "SagerNet/sing-box" "true"
-UPDATE_VERSION "tcping" "Mattraks/tcping"
-UPDATE_VERSION "trojan-go" "p4gefau1t/trojan-go"
-UPDATE_VERSION "trojan" "trojan-gfw/trojan"
-UPDATE_VERSION "v2ray-core" "v2fly/v2ray-core"
-UPDATE_VERSION "v2ray-plugin" "teddysun/v2ray-plugin"
-UPDATE_VERSION "v2rayA" "v2rayA/v2rayA"
-UPDATE_VERSION "xray-core" "XTLS/Xray-core"
-UPDATE_VERSION "xray-plugin" "teddysun/xray-plugin"
