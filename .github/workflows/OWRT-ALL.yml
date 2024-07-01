@@ -38,7 +38,7 @@ jobs:
             #THEME: argon
           - SOURCE: coolsnowwolf/lede
             BRANCH: master
-            THEME: bootstrap
+            THEME: argon
 
     #调用公用编译核心WRT-CORE.yml
     uses: ./.github/workflows/WRT-CORE.yml
