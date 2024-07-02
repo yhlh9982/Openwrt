@@ -30,6 +30,10 @@ git clone --depth=1 --single-branch --branch $PKG_BRANCH "https://github.com/$PK
 }
 
 #UPDATE_PACKAGE "包名" "项目地址" "项目分支" "pkg/name，可选，pkg为从大杂烩中单独提取包名插件；name为重命名为包名"
+UPDATE_PACKAGE "design" "gngpp/luci-theme-design" "$([[ $WRT_URL == *"lede"* ]] && echo "main" || echo "js")"
+UPDATE_PACKAGE "design-config" "gngpp/luci-app-design-config" "master"
+UPDATE_PACKAGE "argon" "jerrykuku/luci-theme-argon" "$([[ $WRT_URL == *"lede"* ]] && echo "18.06" || echo "master")"
+UPDATE_PACKAGE "argon-config" "jerrykuku/luci-app-argon-config" "$([[ $WRT_URL == *"lede"* ]] && echo "18.06" || echo "master")"
 
 #添加需要的插件
 #git clone --depth=1 https://github.com/kongfl888/luci-app-adguardhome package/luci-app-adguardhome
@@ -41,8 +45,6 @@ git clone --depth=1 https://github.com/ximiTech/luci-app-msd_lite package/luci-a
 git clone --depth=1 https://github.com/ximiTech/msd_lite package/msd_lite
 #git clone --depth=1 https://github.com/sbwml/luci-app-alist package/luci-app-alist
 git clone --depth=1 https://github.com/lwb1978/openwrt-gecoosac package/openwrt-gecoosac
-git clone --depth=1 https://github.com/gngpp/luci-app-design-config package/luci-app-design-config
-
 
 #smartdns相关
 git clone --depth=1 https://github.com/pymumu/openwrt-smartdns package/smartdns
@@ -61,16 +63,11 @@ if [[ $WRT_URL != *"lede"* ]]; then
 git clone --depth=1 -b lede https://github.com/pymumu/luci-app-smartdns package/luci-app-smartdns
 rm -rf feeds/packages/lang/golang
 git clone --depth=1 -b 20.x https://github.com/sbwml/packages_lang_golang packages/lang/golang
-git clone --depth=1 -b 18.06 https://github.com/jerrykuku/luci-app-argon packages/luci-app-argon
-git clone --depth=1 -b 18.06 https://github.com/jerrykuku/luci-app-argon-config packages/luci-app-argon-config
-git clone --depth=1 https://github.com/gngpp/luci-theme-design packages/luci-theme-design
 fi
 
 if [[ $WRT_URL == *"openwrt-6.x"* ]]; then
+UPDATE_PACKAGE "qmi-wwan" "immortalwrt/wwan-packages" "master" "pkg"
 git clone --depth=1 https://github.com/pymumu/luci-app-smartdns package/luci-app-smartdns
-git clone --depth=1 -b js https://github.com/gngpp/luci-theme-design packages/luci-theme-design
-git clone --depth=1 https://github.com/jerrykuku/luci-app-argon packages/luci-app-argon
-git clone --depth=1 https://github.com/jerrykuku/luci-app-argon-config packages/luci-app-argon-config
 fi
 
 #更新软件包版本
